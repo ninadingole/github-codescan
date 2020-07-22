@@ -9,9 +9,7 @@ on:
 #   schedule:
 #     - cron: '0 3 * * 4'
 
-queries:
-  - uses: security-extended
-  - uses: security-and-quality
+
 
 jobs:
   analyse:
@@ -55,4 +53,9 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
-
+      with:
+        queries:
+          - name: security extended
+            uses: security-extended
+          - name: security and quality
+            uses: security-and-quality
