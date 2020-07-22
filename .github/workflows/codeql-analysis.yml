@@ -34,7 +34,7 @@ jobs:
       uses: github/codeql-action/init@v1
       # Override language selection by uncommenting this and choosing your languages
       with:
-        languages: java
+        config-file: ../codeql-config.yml
 
     # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).
     # If this step fails, then you should remove it and run the build manually (see below)
@@ -53,6 +53,4 @@ jobs:
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
-      with:
-        config-file: ../codeql-config.yml
 
