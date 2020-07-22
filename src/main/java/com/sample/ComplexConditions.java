@@ -28,4 +28,12 @@ public class ComplexConditions {
         return null;
     }
 
+    public int Id() {
+        if(id == 0) {
+            return 0;
+        }else{
+            return id;
+        }
+    }
+
 }
