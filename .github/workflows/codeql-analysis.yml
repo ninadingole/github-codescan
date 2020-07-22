@@ -54,8 +54,5 @@ jobs:
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
       with:
-        queries:
-          - name: security extended
-            uses: security-extended
-          - name: security and quality
-            uses: security-and-quality
+        config-file: ./.github/workflows/codeql-config.yml
+

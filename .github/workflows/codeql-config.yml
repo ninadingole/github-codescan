@@ -1,0 +1,15 @@
+name: "My CodeQL config"
+
+disable-default-queries: true
+
+queries:
+  - name: Extended Security
+    uses: security-extended
+  - name: For Quality
+    uses: security-and-quality
+
+paths-ignore:
+  - node_modules
+  - '**/*.test.js'
+paths:
+  - src
