@@ -9,5 +9,8 @@ public class App {
         List<AccountDTO> accountDTOS = c.unsafeFind("1");
         System.out.println(accountDTOS);
 
+
+        ComplexityCode cc = new ComplexityCode();
+        cc.Id();
     }
 }
