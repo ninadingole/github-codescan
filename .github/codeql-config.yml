@@ -10,7 +10,7 @@ queries:
   - name: For Quality
     uses: security-and-quality
   - name: codeql repo
-    uses: github/codeql/java@master
+    uses: github/codeql/java/ql@v1.24.0
 
 paths-ignore:
   - node_modules
