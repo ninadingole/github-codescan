@@ -7,6 +7,8 @@ queries:
     uses: security-extended
   - name: For Quality
     uses: security-and-quality
+  - name: codeql repo
+    uses: github/codeql/java@master
 
 paths-ignore:
   - node_modules
