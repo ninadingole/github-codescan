@@ -1,5 +1,7 @@
 name: "My CodeQL config"
 
+disable-default-queries: true
+
 languages: java
 
 queries:
