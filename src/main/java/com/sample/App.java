@@ -12,5 +12,8 @@ public class App {
 
         ComplexityCode cc = new ComplexityCode();
         cc.Id();
+
+        LetsDivideByZero zero = new LetsDivideByZero();
+        zero.getAmount();
     }
 }

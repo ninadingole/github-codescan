@@ -2,6 +2,7 @@ package com.sample;
 
 import javax.sql.DataSource;
 import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -10,9 +11,13 @@ import java.util.List;
 public class SQLInjectionSample {
 
     DataSource dataSource;
+    private String url = "jdbc:mysql://localhost/test";
+    private String username = "root";
+    private String password = "abcd@1234";
 
-    public void setDataSource(DataSource dataSource) {
-        this.dataSource = dataSource;
+
+    private Connection getConn() throws SQLException {
+        return DriverManager.getConnection(url, username, password);
     }
 
     public List<AccountDTO>
@@ -24,7 +29,7 @@ public class SQLInjectionSample {
                 + "from Accounts where customer_id = '"
                 + customerId
                 + "'";
-        Connection c = dataSource.getConnection();
+        Connection c = getConn();
         ResultSet rs = c.createStatement().executeQuery(sql);
         while(rs.next()) {
             accountDTOS.add(new AccountDTO());
